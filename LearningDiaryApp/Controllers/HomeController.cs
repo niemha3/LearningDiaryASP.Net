@@ -16,6 +16,7 @@ namespace LearningDiaryApp.Controllers
      
         private readonly ILogger<HomeController> _logger;
 
+        private readonly LearningDiaryAppContext _context;
 
 
         public HomeController(ILogger<HomeController> logger, LearningDiaryAppContext context)
@@ -24,14 +25,13 @@ namespace LearningDiaryApp.Controllers
             _logger = logger;
         }
 
-        private readonly LearningDiaryAppContext _context;
 
      
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
 
         public IActionResult Privacy()
         {
@@ -55,6 +55,10 @@ namespace LearningDiaryApp.Controllers
             return View(topic);
         }
 
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Topic.ToListAsync());
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

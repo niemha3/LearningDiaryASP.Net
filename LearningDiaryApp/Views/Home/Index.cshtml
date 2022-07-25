@@ -10,17 +10,18 @@
     <h1 class="main-title display-1">Learning Diary</h1>
     <input class="searchbar" type="search" placeholder="search topics.." /> <input class="searchButton" type="submit" value="Search" />
     <div class="text-center p-3">
-         <button asp-action="Details" href="#topics" type="button" class="btn btn-light">Five latest topics</button>
+         <button href="#topics" type="button" class="btn btn-light">Five latest topics</button>
     </div>
 </div>
 
 
 
 
-@*<div class="container">
+<div class="container">
 
     @{
-    ViewData["Title"] =  "Topics"}
+        ViewData["Title"] = "Topics";
+    }
 
     @foreach (var item in Model)
     {
@@ -75,5 +76,5 @@
 
     }
 
-</div>*@
+</div>
 
