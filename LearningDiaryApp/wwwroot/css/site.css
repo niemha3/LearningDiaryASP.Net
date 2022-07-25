@@ -80,25 +80,26 @@ html {
 }
 
 body {
-    /* Margin bottom by footer height */
+    background-color:#dcd6d5;
+}
 
-  
-    
+main {
+    background: linear-gradient(#cea8a2, #ca8681);
 }
 
 .card {
     background-color: white;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 4px;
+    margin-bottom: 5%;
     font-size: 1.5em;
     border-radius: 10px;
     box-shadow: 3px 3px #888888;
     padding: 20px;
 }
 .footer {
-
+  background-color:#dcd6d5;  
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -124,9 +125,9 @@ body {
 .searchButton {
     border: 2px solid grey;
 }
-.topics {
+
 
     
 
-}
+
 
