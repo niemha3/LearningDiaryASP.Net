@@ -1,0 +1,79 @@
+﻿@model IEnumerable<LearningDiaryApp.Models.Topic>
+@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+<div class="text-center container hero-text">
+
+
+    <h1 class="main-title display-1">Learning Diary</h1>
+    <input class="searchbar" type="search" placeholder="search topics.." /> <input class="searchButton" type="submit" value="Search" />
+    <div class="text-center p-3">
+         <button asp-action="Details" href="#topics" type="button" class="btn btn-light">Five latest topics</button>
+    </div>
+</div>
+
+
+
+
+@*<div class="container">
+
+    @{
+    ViewData["Title"] =  "Topics"}
+
+    @foreach (var item in Model)
+    {
+
+        <div class="card">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3>Title: @Html.DisplayFor(modelItem => item.Title)</h3>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                        <a title="edit" asp-action="Edit" asp-route-id="@item.Id"><img class="icons mr-2" src="~/css/icons8-edit-30.png" /></a>
+                        <a title="delete" asp-action="Delete" asp-route-id="@item.Id"><img src="~/css/icons8-delete-30.png" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p id="topic-description">Description: @Html.DisplayFor(modelItem => item.Description)</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12  col-lg-4">
+                        <p id="topic-id">Id: @Html.DisplayFor(modelItem => item.Id)</p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <p id="topic-timetomaster">Time To Master: @Html.DisplayFor(modelItem => item.TimeToMaster) days</p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <p id="time-spent">Time Spent: @Html.DisplayFor(modelItem => item.TimeSpent) days</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <p id="topic-source">Learning source: @Html.DisplayFor(modelItem => item.Source)</p>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <p id="starting-date">Starting date: @Html.DisplayFor(modelItem => item.StartLearningDate)</p>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <p id="completion date">Completion date: @Html.DisplayFor(modelItem => item.CompletitionDate)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>*@
+
