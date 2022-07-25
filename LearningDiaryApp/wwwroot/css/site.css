@@ -69,17 +69,20 @@ html {
   min-height: 100%;
 }
 
-
-body {
-    /* Margin bottom by footer height */
-
-    background-image: url(pexels-karolina-grabowska-5477709.jpg);
-    height: 100vh;
+.hero {
+     background-image: url(pexels-karolina-grabowska-5477709.jpg);
+    height:100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     Font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+body {
+    /* Margin bottom by footer height */
+
+  
     
 }
 
@@ -120,5 +123,10 @@ body {
 
 .searchButton {
     border: 2px solid grey;
+}
+.topics {
+
+    
+
 }
 
