@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header class="hero">
-        <nav class="navbar navbar-expand-lg navbar-light mb-5">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light mb-1">
 
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/css/logo_transparent.png" width="120" /></a>
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/css/logo_transparent.png" width="120" height="100" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,9 +23,9 @@
                     <li class="nav-item dropdown mr-4">
                         <a class="nav-link dropdown-toggle text-dark" id="navbardrop" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Topic">Topics</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="Topics/Create">Add new Topic</a>
-                            <a class="dropdown-item" href="#">Edit or Delete Topics</a>
-                            <a class="dropdown-item" href="Topics/Index">Show All Topics</a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Topics" asp-action="Create">Add new Topic</a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Topics" asp-action="Delete">Edit or Delete Topics</a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Topics" asp-action="">Show All Topics</a>
                         </div>
                     </li>
 
@@ -50,15 +50,7 @@
             </div>
 
         </nav>
-        <div class="text-center hero-text">
-
-
-            <h1 class="main-title display-1">Learning Diary</h1>
-            <input class="searchbar" type="search" placeholder="search topics.." /> <input class="searchButton" type="submit" value="Search" />
-            <div class="text-center p-3">
-                <button href="#content" type="button" class="btn btn-light">Five latest topics</button>
-            </div>
-        </div>
+    
     </header>
     <div class="container">
         <main role="main" class="pb-3 main-content" id="content">
@@ -66,7 +58,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-center text-muted border-0">
+    <footer class="border-top footer text-center text-muted mt-3 border-0 position-fixed">
         <div class="container">
             &copy; 2022 - LearningDiaryApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

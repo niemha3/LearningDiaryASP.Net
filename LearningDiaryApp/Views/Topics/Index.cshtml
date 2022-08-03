@@ -3,15 +3,17 @@
 @{
     ViewData["Title"] = "Topics";
 }
-<div class="header">
-    <h1 class="text-center">Topics</h1>
 
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
-</div>
+    <h1 class="main-title display-3 text-center">Topics</h1>
+
+        <div class="row justify-content-center">
+        <button class="addBtn btn btn-dark" asp-action="Create">Add new topic</button>
+            
+        </div>
+
 @foreach (var item in Model)
 {
+  <div class="topicsTausta">
 
 <div class="card">
     <div class="container">
@@ -60,6 +62,7 @@
         </div>
     </div>
 </div>
+ </div>
 
 }
 

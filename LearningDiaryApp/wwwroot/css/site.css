@@ -69,7 +69,7 @@ html {
   min-height: 100%;
 }
 
-.hero {
+/*.hero {
      background-image: url(pexels-karolina-grabowska-5477709.jpg);
     height:100vh;
     background-position: center;
@@ -77,14 +77,20 @@ html {
     background-repeat: no-repeat;
     position: relative;
     Font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-}
+}*/
 
 body {
-    background-color:#dcd6d5;
+    background-image: url("pexels-karolina-grabowska-5477709.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    Font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    background-color: #dcd6d5;
 }
 
 main {
-    background: linear-gradient(#cea8a2, #ca8681);
+    
+    /*background: linear-gradient(#cea8a2, #ca8681);*/
 }
 
 .card {
@@ -100,7 +106,8 @@ main {
 }
 .footer {
   background-color:#dcd6d5;  
-  position: absolute;
+ 
+  margin-top:5px;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
@@ -126,8 +133,41 @@ main {
     border: 2px solid grey;
 }
 
+input:focus {
+    outline:none;
+    box-shadow: 0 0 0 2px pink;
+}
 
+.form-group > input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px pink;
+}
+
+.topics-wrapper {
+    margin-top:40%;
+}
+
+.formStyle {
+   border-radius:10px;
+   text-align:center;
+   justify-content:center;
+   background-color:whitesmoke;
+   padding:15px;
+}
+
+.addBtn {
+}
+
+.topicsTausta {
+    padding:25px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+   
+  
     
+}
 
-
-
+.instructions {
+    justify-content:center;
+}
