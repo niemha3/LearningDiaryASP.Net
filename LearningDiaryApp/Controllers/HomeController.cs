@@ -38,15 +38,15 @@ namespace LearningDiaryApp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? topicId)
         {
-            if (id == null)
+            if (topicId == null)
             {
                 return NotFound();
             }
 
             var topic = await _context.Topic
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.Id == topicId);
             if (topic == null)
             {
                 return NotFound();
@@ -57,7 +57,10 @@ namespace LearningDiaryApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Topic.ToListAsync());
+
+
+            
+            return View(await _context.Topic.OrderByDescending(topic => topic.Id).Take(5).ToListAsync());
         }
 
 

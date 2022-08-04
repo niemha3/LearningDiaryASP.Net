@@ -171,3 +171,8 @@ input:focus {
 .instructions {
     justify-content:center;
 }
+
+.topicTitle {
+   
+    font-weight:700;
+}
